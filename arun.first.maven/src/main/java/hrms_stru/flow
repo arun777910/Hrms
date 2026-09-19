@@ -1,0 +1,25 @@
+                          
+
+                              HRMS Automation  
+                                  │
+                                  ├── pom.xml
+                                  │
+                                  └── src
+                                        └── test
+                                               └── java
+                                                     │ 
+                                                     ├── base
+                                                     │     └── BaseTest.java
+                                                     │
+                                                     ├── pages
+                                                     │    ├── LoginPage.java
+                                                     │    ├── DashboardPage.java
+                                                     │    ├── EmployeePage.java
+                                                     │    ├── AttendancePage.java
+                                                     │    └── LeavePage.java
+                                                     │
+                                                     └── tests 
+                                                           ├── LoginTest.java                                                    ├── LoginTest.java
+                                                           ├── EmployeeTest.java
+                                                           ├── AttendanceTest.java
+                                                           └── LeaveTest.java
