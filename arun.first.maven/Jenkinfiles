@@ -1,9 +1,14 @@
-
 pipeline {
-
     agent any
 
     stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/arun777910/Hrms.git'
+            }
+        }
 
         stage('Build') {
             steps {
@@ -11,31 +16,10 @@ pipeline {
             }
         }
 
-        stage('Install Playwright Browsers') {
-            steps {
-                bat 'mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install"'
-            }
-        }
-
-        stage('Run Automation Tests') {
+        stage('Run Tests') {
             steps {
                 bat 'mvn test'
             }
-        }
-    }
-
-    post {
-
-        always {
-            echo 'Automation execution completed.'
-        }
-
-        success {
-            echo 'Automation tests PASSED.'
-        }
-
-        failure {
-            echo 'Automation tests FAILED.'
         }
     }
 }
