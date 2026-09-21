@@ -6,6 +6,7 @@ pipeline {
     }
 
     stages {
+
         stage('Build') {
             steps {
                 dir('arun.first.maven') {
@@ -22,4 +23,11 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            junit 'arun.first.maven/target/surefire-reports/*.xml'
+        }
+    }
 }
+
