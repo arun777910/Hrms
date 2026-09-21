@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/arun777910/Hrms.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 bat 'mvn clean compile'
