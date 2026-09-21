@@ -1,17 +1,24 @@
 pipeline {
     agent any
 
-    stages {
+    tools {
+        maven 'Maven'
+    }
 
+    stages {
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                dir('arun.first.maven') {
+                    bat 'mvn clean compile'
+                }
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'mvn test'
+                dir('arun.first.maven') {
+                    bat 'mvn test'
+                }
             }
         }
     }
