@@ -1,1 +1,41 @@
 
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Build') {
+            steps {
+                bat 'mvn clean compile'
+            }
+        }
+
+        stage('Install Playwright Browsers') {
+            steps {
+                bat 'mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install"'
+            }
+        }
+
+        stage('Run Automation Tests') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+    }
+
+    post {
+
+        always {
+            echo 'Automation execution completed.'
+        }
+
+        success {
+            echo 'Automation tests PASSED.'
+        }
+
+        failure {
+            echo 'Automation tests FAILED.'
+        }
+    }
+}
