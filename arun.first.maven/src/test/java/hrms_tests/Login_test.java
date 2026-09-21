@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import hrms_base.Base;
 import hrms_pages.Login_page;
 
-public class Login_testscript extends Base 
+public class Login_test extends Base 
 {
 	Login_page loginPage;
 	
