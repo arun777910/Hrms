@@ -6,7 +6,7 @@ import hrms_base.Base;
 import hrms_pages.ForgotPasswordPage;
 import hrms_pages.LoginPage;
 
-public class ForgotPasswordTest extends Base
+public class ForgotPasswordTest extends BaseCls
 {
 	LoginPage loginpage;
 	ForgotPasswordPage forgotpasswordpage;
