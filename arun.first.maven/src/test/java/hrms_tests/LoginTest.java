@@ -6,11 +6,11 @@ import static org.testng.Assert.assertTrue;
 import org.testng.annotations.Test;
 
 import hrms_base.Base;
-import hrms_pages.Login_page;
+import hrms_pages.LoginPage;
 
 public class LoginTest extends Base 
 {
-	Login_page loginPage;
+	LoginPage loginPage;
 	
 	
 
@@ -20,7 +20,7 @@ public class LoginTest extends Base
 
 	public void invalidLoginTest() {
 
-	loginPage = new Login_page(page);
+	loginPage = new LoginPage(page);
 	loginPage.openLoginPage();
 	loginPage.login("invalid@test.com","WrongPassword@123");
 	page.waitForTimeout(2000);
@@ -41,7 +41,7 @@ public class LoginTest extends Base
 	
 	public void wrongPasswordTest() {
 
-    loginPage = new Login_page(page);
+    loginPage = new LoginPage(page);
 	loginPage.openLoginPage();
 	loginPage.login("arunsakkaravarthy777@gmail.com","WrongPassword@123");
 	page.waitForTimeout(2000);
@@ -62,7 +62,7 @@ public class LoginTest extends Base
 	
 	public void emptyLoginTest() {
 
-	loginPage = new Login_page(page);
+	loginPage = new LoginPage(page);
 	loginPage.openLoginPage();
 	loginPage.clickLogin();
 	page.waitForTimeout(2000);
@@ -94,7 +94,7 @@ public class LoginTest extends Base
 		public void validLoginTest() 
 		{
 
-		loginPage = new Login_page(page);
+		loginPage = new LoginPage(page);
 		loginPage.openLoginPage();
 		loginPage.login("arunsakkaravarthy777@gmail.com","Arun@777");
 		
