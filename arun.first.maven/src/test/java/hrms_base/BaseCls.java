@@ -1,4 +1,4 @@
-ackage hrms_base;
+package hrms_base;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
