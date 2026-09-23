@@ -4,11 +4,11 @@ import org.testng.annotations.Test;
 
 import hrms_base.Base;
 import hrms_pages.ForgotPasswordPage;
-import hrms_pages.Loginpage;
+import hrms_pages.LoginPage;
 
 public class ForgotPasswordTest extends Base
 {
-	Loginpage loginpage;
+	LoginPage loginpage;
 	ForgotPasswordPage forgotpasswordpage;
 	
 	@Test
@@ -18,7 +18,7 @@ public class ForgotPasswordTest extends Base
 	{
 	
 	// Step 1: Open login page
-	loginpage = new Loginpage(page);
+	loginpage = new LoginPage(page);
 	loginpage.openLoginPage();
 
 
