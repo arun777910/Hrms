@@ -19,7 +19,8 @@ public class ForgotPasswordTest extends BaseCls
 	
 	// Step 1: Open login page
 	loginpage = new LoginPage(page);
-	loginpage.openLoginPage();
+	//loginpage.openLoginPage();
+	page.navigate("https://dev-hrms.aahaas.com/login");
 
 
 	// Step 3: Create Forgot Password page object
