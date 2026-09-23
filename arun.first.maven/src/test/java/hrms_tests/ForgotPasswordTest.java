@@ -2,7 +2,7 @@ package hrms_tests;
 
 import org.testng.annotations.Test;
 
-import hrms_base.Base;
+import hrms_base.BaseCls;
 import hrms_pages.ForgotPasswordPage;
 import hrms_pages.LoginPage;
 
