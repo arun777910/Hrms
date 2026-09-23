@@ -4,7 +4,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 
-public class Login_page 
+public class LoginPage 
 {
 	private Page page;
 
@@ -21,7 +21,7 @@ public class Login_page
 	
 	// Constructor
 	
-	public Login_page (Page page)
+	public LoginPage (Page page)
 	{
 
 	this.page = page;
